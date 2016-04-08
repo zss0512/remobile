@@ -1,0 +1,73 @@
+.list-index {
+    color: #057bf7;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    font-size: 12px;
+    font-weight: bold;
+    position:absolute;
+    z-index:199;
+    top:0%;
+		line-height: 0.8em;
+    right: 0;
+    background: #fff;
+    width: 18px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    background: lightgrey;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    li{
+        position: relative;
+        z-index: 10;
+        border-radius: 100%;
+        &.active {
+            color: red;
+        }
+    }
+    li:before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        width: 10px;
+        height: 100%;
+        top: 0;
+    }
+}
+
+
+// add toast less for letter thumbnail
+.indexed-list-letter-container{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  z-index: 11800;
+  color: #fff;
+  width: 70px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s;
+  &.show {
+    display: block;
+  }
+  &.fadein {
+    opacity: 0.7;
+  }
+  .letter {
+    font-size:50px;
+    text-align:center;
+  }
+}
